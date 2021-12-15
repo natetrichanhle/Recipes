@@ -27,9 +27,9 @@
         </div>
         <div>
             <label for = 'under30'>Under 30 Minutes?</label>
-            <input type = 'radio' name = 'under30' value = '1'>
+            <input type = 'radio' name = 'under30' value = '1' {{'checked' if recipe.under30}}>
             <label for = 'yes'>Yes</label>
-            <input type = 'radio' name = 'under30' value = '0' checked>
+            <input type = 'radio' name = 'under30' value = '0' {{'checked' if not recipe.under30}}>
             <label for = 'no'>No</label>
         </div>
         <input type = 'submit' value = 'Update'>
