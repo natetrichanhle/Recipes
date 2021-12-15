@@ -47,15 +47,15 @@ class Recipe:
     def validate_recipe(data):
         is_valid = True
         if len(data['name']) < 3:
-            flash('Recipe name has to be 3 characters long.')
+            flash('Recipe name has to be 3 characters long.','recipe')
             is_valid = False
         if len(data['description']) < 3:
-            flash('Recipe description has to be 3 characters long.')
+            flash('Recipe description has to be 3 characters long.','recipe')
             is_valid = False
         if len(data['instructions']) < 3:
-            flash('Recipe instructions has to be 3 characters long.')
+            flash('Recipe instructions has to be 3 characters long.','recipe')
             is_valid = False
         if data['date'] == '':
-            flash('Date input needed')
+            flash('Date input needed','recipe')
             is_valid = False
         return is_valid

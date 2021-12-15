@@ -20,6 +20,10 @@ def dashboard():
 
 @app.post('/new')
 def add():
+    if 'user_id' not in session:
+        return redirect('/logout')
+    if not Recipe.validate_recipe(request.form):
+        return redirect('/recipes')
     data = {
         'user_id' : session['user_id'],
         ** request.form
