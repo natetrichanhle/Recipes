@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+<body>
+    <form action = '/update/{{recipe.id}}' method = 'post'>
+        <h2>Edit Recipe</h2>
+        <div>
+            <label for = 'name'>Name:</label>
+            <input type = 'text' name = 'name' value = '{{recipe.name}}'>
+        </div>
+        <div>
+            <label for = 'description'>Description:</label>
+            <input type = 'text' name = 'description' value = '{{recipe.description}}'>
+        </div>
+        <div>
+            <label for = 'instructions'>Instructions:</label>
+            <input type = 'text' name = 'instructions' value = '{{recipe.instructions}}'>
+        </div>
+        <div>
+            <label for = 'date'>Date Made On:</label>
+            <input type = 'date' name = 'date' value = '{{recipe.date}}'>
+        </div>
+        <div>
+            <label for = 'under30'>Under 30 Minutes?</label>
+            <input type = 'radio' name = 'under30' value = '1'>
+            <label for = 'yes'>Yes</label>
+            <input type = 'radio' name = 'under30' value = '0' checked>
+            <label for = 'no'>No</label>
+        </div>
+        <input type = 'submit' value = 'Update'>
+    </form>
+    <a href = '/dashboard'>Dashboard</a>
+    <a href = '/'>Logout</a>
+</body>
+</html>
